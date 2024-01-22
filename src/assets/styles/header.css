@@ -1,0 +1,11 @@
+h1 {
+	font-size: 2rem;
+	color: #fff;
+}
+
+.header-container {
+	display: flex;
+	width: 100%;
+	padding: 0 1rem;
+	background-color: #653fee;
+}
