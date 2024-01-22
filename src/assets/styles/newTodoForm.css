@@ -2,19 +2,19 @@
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
-	margin-top: 10px;
+	margin: 10px 0;
 }
 
 input {
 	width: 80%;
-	margin: 0 2px 0 4px;
+	margin: 0 2px 0 5px;
 	padding: 0.4em 1.2em;
 	border-radius: 6px;
 	font-size: 1em;
 	font-weight: 500;
 }
 
-button {
+.add-btn {
 	width: 20%;
-	margin: 0 4px 0 2px;
+	margin: 0 5px 0 2px;
 }
