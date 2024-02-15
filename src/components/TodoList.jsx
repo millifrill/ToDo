@@ -1,25 +1,17 @@
 import React from 'react';
-import '/src/assets/styles/todoList.css';
+import PropTypes from 'prop-types';
+import '../assets/styles/todoList.css';
 
-const TodoList = () => {
+export default function TodoList({ items }) {
 	return (
 		<ul className='list'>
-			<li>
-				<label>
-					<input type='checkbox' />
-					Item 1
-				</label>
-				<button className='delete-btn'>Delete</button>
-			</li>
-			<li>
-				<label>
-					<input type='checkbox' />
-					Item 2
-				</label>
-				<button className='delete-btn'>Delete</button>
-			</li>
+			{items.map((item) => (
+				<li key={item.id}>{item.text}</li>
+			))}
 		</ul>
 	);
-};
+}
 
-export default TodoList;
+TodoList.propTypes = {
+	items: PropTypes.array.isRequired,
+};
