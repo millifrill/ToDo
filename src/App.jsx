@@ -19,11 +19,17 @@ export default function App() {
 		setItems(newItemList);
 	};
 
+	const deleteItem = (id) => {
+		setItems((newItemList) => {
+			return newItemList.filter((item) => item.id !== id);
+		});
+	};
+
 	return (
 		<>
 			<Header />
 			<NewTodoForm addItem={addItem} />
-			<TodoList items={items} />
+			<TodoList items={items} deleteItem={deleteItem} />
 		</>
 	);
 }
