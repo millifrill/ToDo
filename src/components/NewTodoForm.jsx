@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
 import '../assets/styles/newTodoForm.css';
 
 export default function NewTodoForm({ addItem }) {
@@ -9,9 +10,10 @@ export default function NewTodoForm({ addItem }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const newItemObject = {
-			id: Date.now(),
+			id: uuidv4(),
 			text: newItem,
 		};
+		console.log(newItemObject);
 		addItem(newItemObject);
 		setNewItem('');
 		inputRef.current.focus();
@@ -21,7 +23,7 @@ export default function NewTodoForm({ addItem }) {
 		<form onSubmit={handleSubmit} className='container'>
 			<input
 				ref={inputRef}
-				placeholder='Enter to do...'
+				placeholder='Enter todo...'
 				value={newItem}
 				onChange={(e) => setNewItem(e.target.value)}
 				type='text'

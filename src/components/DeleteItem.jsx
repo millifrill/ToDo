@@ -1,5 +1,6 @@
 import React from 'react';
+import '../assets/styles/deleteItem.css';
 
 export default function DeleteItem() {
-	return <button>Delete</button>;
+	return <button className='delete-btn'>Delete</button>;
 }

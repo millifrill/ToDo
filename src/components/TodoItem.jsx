@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DeleteItem from './DeleteItem';
+import CheckBox from './CheckBox';
+import '../assets/styles/todoItem.css';
 
 export default function TodoItem({ items }) {
 	return (
-		<div>
+		<>
 			{items.map((item) => (
 				<li key={item.id}>
-					<p>{item.text}</p>
-					<div>
-						<DeleteItem />
-					</div>
+					<CheckBox />
+					<p className='list-item'>{item.text}</p>
 				</li>
 			))}
-		</div>
+		</>
 	);
 }
 

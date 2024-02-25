@@ -6,6 +6,7 @@ import TodoItem from './TodoItem';
 export default function TodoList({ items }) {
 	return (
 		<ul className='list'>
+			{items.length === 0 && 'No todos'}
 			<TodoItem items={items} />
 		</ul>
 	);
